@@ -14,7 +14,8 @@ export default function Page(){
 
     return(
         <View style={Styles.page}>
-            <Text>something here</Text>
+            {/* transforms to rotate */}
+            <Text style={{transform: [{ rotate: '90deg'}]}}>something here</Text>
             <Text>{name} {noun} {event}</Text>
 
             <Link href={{

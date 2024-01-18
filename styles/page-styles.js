@@ -5,15 +5,20 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
-        justifyContent: 'center',
+        //justifyContent: 'center',
     },
     input: {
         width: '80%',
-        flex: .08,
+        //flex: .08,
         borderWidth: 2,
         borderRadius: 10,
         paddingLeft: 15,
         margin: 15,
+    },
+    textStyleInstr: {
+        fontSize: 30,
+        padding: 30,
+        paddingTop: 50,
     }
 });
 

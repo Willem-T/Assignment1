@@ -19,7 +19,15 @@ const styles = StyleSheet.create({
         fontSize: 30,
         padding: 30,
         paddingTop: 50,
-    }
+    },
+    row: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+    },
+    rotatedText: {
+        fontSize: 30,
+        justifyContent: 'flex-end',
+    },
 });
 
 export default styles;

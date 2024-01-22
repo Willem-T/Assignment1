@@ -13,21 +13,33 @@ export default function Page(){
     const { event } = params; 
 
     return(
-        <View style={Styles.row}>
-            <Link href={{
+        <View style={Styles.container}>
+
+        {/* Back Button */}
+        <View>
+        <Link href={{
                 pathname: "/",
                 //params: {name, noun, event}, not needed 
                 }} asChild>
             <Button title='Back'></Button>
             </Link>
-            <View style={Styles.rotatedText}>
-            {/* transforms to rotate */}
-            {/* TODO fix style */}
-            <Text style={{transform: [{ rotate: '-90deg'}], fontSize: 45,}}>something here</Text>
-            </View>
+        </View>
+
+        {/* Rotated Text */}
+      <View style={Styles.row}>
+        <View style={Styles.rotatedText}>
+          <Text style={Styles.boldText}>something here</Text>
+        </View>
+        
+        {/* Story Text */}
+        <View style={Styles.storyText}>
             <Text>some text {name}</Text>
-            <Text>{noun} some other text</Text>
+            <Text> {noun} some other text</Text>
             <Text>final text {event}</Text>
+        </View>
+
+        </View>
+
         </View>
     )
 }

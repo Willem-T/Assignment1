@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
-        //justifyContent: 'center',
+        //justifyContent: 'center',\
     },
     container: {
         flex: 1,
@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
     },
     input: {
         width: '80%',
+        textAlign: 'center',
         //flex: .08,
         borderWidth: 2,
         borderRadius: 10,
@@ -72,7 +73,7 @@ const styles = StyleSheet.create({
       rotatedText: {
         flex: 1,
         position: 'absolute',
-        right: '25%', //use this instead of left: '-50%',
+        right: '50%', //use this instead of left: '-50%',
         bottom: '30%',
         transform: [{ rotate: '-90deg' }],
       },
@@ -80,10 +81,34 @@ const styles = StyleSheet.create({
       storyText: {
         position: 'absolute',
         left: '60%',
-        top: '25%',
+        top: '40%',
         flex: 1,
+        
       },
-
+      buttonContainer: {
+        padding: '10%',
+        //maxWidth: '50%', //needs centering if used 
+      },
+      buttonStyle:{
+        padding: '5%',
+      },
+      logo: {
+        position: 'absolute',
+        margin: 10,
+        height: 100,
+        width: 100,
+      },
+      image: {
+        position: 'relative',
+        height: '30%',
+        width: '50%',
+        marginLeft: '45%'
+      },
+      dateTime: {
+        position: 'absolute',
+        marginLeft: '45%',
+        marginTop: '40%'
+      },
 });
 
 export default styles;

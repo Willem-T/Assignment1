@@ -1,4 +1,4 @@
-import {Text, View, TextInput, Button, } from 'react-native';
+import {Text, View, TextInput, Button,} from 'react-native';
 import Styles from '../styles/page-styles.js';
 import { Link,} from 'expo-router';
 import React from 'react';
@@ -10,13 +10,14 @@ export default function Page(){
 
     return (
         <View style={Styles.page}>
+
             <Text style={Styles.textStyleInstr}>Instructions</Text>
 
             <TextInput 
                 style={Styles.input}
                 onChangeText={setName}
                 value={name}
-                placeholder='Name'        
+                placeholder='Name'    
             ></TextInput>
 
             <TextInput 
@@ -33,17 +34,23 @@ export default function Page(){
                 placeholder='An Event'        
             ></TextInput>
 
+            <View style={Styles.buttonContainer}>
             {/* Might want to change buttons to pressable */}
             {/* Buttons needs styling */}
+            <View style={Styles.buttonStyle}>
             <Link href={{
                 pathname: "/storyPage",
                 params: {name, noun, event},
                 }} asChild>
             <Button title='Make Story'></Button>
             </Link>
-
+            </View>
+            
+            <View style={Styles.buttonStyle}>
             {/* Apparently this is how you properly call a fuction */}
             <Button title='Clear TextBoxes' onPress={() => clearTextBoxes()}></Button>
+            </View>
+            </View>
         </View>
     )
 

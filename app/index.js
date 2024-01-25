@@ -8,6 +8,9 @@ export default function Page(){
     const [noun, setNoun] = React.useState("");
     const [event, setEvent] = React.useState("");
 
+    //check to make sure something is in every box
+    let isButtonEnabled = (name === '' || noun === '' || event === '') ? true : false;
+
     return (
         <View style={Styles.page}>
 
@@ -37,11 +40,12 @@ export default function Page(){
             <View style={Styles.buttonContainer}>
             {/* Might want to change buttons to pressable */}
             <View style={Styles.buttonStyle}>
+
             <Link href={{
                 pathname: "/storyPage",
                 params: {name, noun, event},
                 }} asChild>
-            <Button title='Make Story'></Button>
+            <Button title='Make Story' disabled={isButtonEnabled}></Button>
             </Link>
             </View>
             

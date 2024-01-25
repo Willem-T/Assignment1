@@ -59,6 +59,7 @@ export default function Page(){
                     <Text style={Styles.storyTextStyle}>attending the {event}</Text>
                 </View>
 
+                {/* signature text */}
                 <View style={Styles.signContainer}>
                     <TextInput
                         multiline={true}

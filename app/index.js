@@ -11,7 +11,7 @@ export default function Page(){
     return (
         <View style={Styles.page}>
 
-            <Text style={Styles.textStyleInstr}>Instructions</Text>
+            <Text style={Styles.textStyleInstr}>Input text into the boxes to create a story</Text>
 
             <TextInput 
                 style={Styles.input}

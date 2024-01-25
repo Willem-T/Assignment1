@@ -1,4 +1,4 @@
-import {Text, View, Button, Image, TextInput} from 'react-native';
+import {Text, View, Button, Image, TextInput,} from 'react-native';
 import Styles from '../styles/page-styles.js';
 import { Link, useLocalSearchParams } from 'expo-router';
 import CurrentDate from './currentDate.js';
@@ -10,6 +10,7 @@ export default function Page(){
     const params = useLocalSearchParams();
 
     const [sig, setSig] = useState("SIGNED: ");
+
 
     //should look into how you can change these var names
     const { name } = params; 
@@ -41,7 +42,7 @@ export default function Page(){
 
             {/* Date and Time */}
             <View style={Styles.dateTime}>
-                <Text>Current Date: {CurrentDate()}</Text>
+                <Text style={Styles.storyTextStyle}>Current Date: {CurrentDate()}</Text>
             </View>
 
             {/* Rotated Text */}
@@ -52,15 +53,17 @@ export default function Page(){
 
                 {/* Story Text */}
                 <View style={Styles.storyText}>
-                    <Text style={{fontSize: 20,}}>some text {name}</Text>
-                    <Text style={{fontSize: 20,}}> {noun} some other text</Text>
-                    <Text style={{fontSize: 20,}}>final text {event}</Text>
+                    <Text style={Styles.storyTextStyle}>{name} is too cool</Text>
+                    <Text style={Styles.storyTextStyle}>for {noun} class</Text>
+                    <Text style={Styles.storyTextStyle}>instead, she/he will be</Text>
+                    <Text style={Styles.storyTextStyle}>attending the {event}</Text>
                 </View>
 
                 <View style={Styles.signContainer}>
                     <TextInput
                         multiline={true}
-                        numberOfLines={4}
+                        numberOfLines={1}
+                        maxLength={25}
                         onChangeText={text => setSig(text)}
                         value={sig}
                     />
@@ -68,5 +71,5 @@ export default function Page(){
             </View>
 
         </View>
-    )
+    );
 }

@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
         //justifyContent: 'center',\
     },
     container: {
-        flex: 1,
+        
         padding: 20,
         height: '100%',
         width: '100%',
@@ -61,20 +61,19 @@ const styles = StyleSheet.create({
     },
 
     row: {
-        flexDirection: 'row',
+        //flexDirection: 'row',
         height: '100%',
         width: '100%',
         //alignItems: 'flex-end', 
         paddingHorizontal: 20,
         position: 'absolute',
-        flex: 1,
+        //flex: 1,
       },
     
       rotatedText: {
-        flex: 1,
         position: 'absolute',
         right: '50%', //use this instead of left: '-50%',
-        bottom: '30%',
+        top: '50%',
         transform: [{ rotate: '-90deg' }],
       },
     
@@ -108,6 +107,15 @@ const styles = StyleSheet.create({
         position: 'absolute',
         marginLeft: '45%',
         marginTop: '40%'
+      },
+      signContainer: {
+        position: 'absolute',
+        marginLeft: '60%',
+        top: '60%',
+        width: '20%',
+        height: '15%',
+        backgroundColor: 'grey',
+        borderRadius: 15,
       },
 });
 

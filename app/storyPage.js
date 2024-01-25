@@ -11,7 +11,7 @@ export default function Page(){
 
     const [sig, setSig] = useState("SIGNED: ");
 
-    //find a better way of doing this
+    //should look into how you can change these var names
     const { name } = params; 
     const { noun } = params; 
     const { event } = params; 
@@ -57,13 +57,14 @@ export default function Page(){
                     <Text style={{fontSize: 20,}}>final text {event}</Text>
                 </View>
 
-                <TextInput 
-                multiline={true}
-                numberOfLines={4}
-                onChangeText={text => setSig(text)}
-                value={sig}
-                />
-
+                <View style={Styles.signContainer}>
+                    <TextInput
+                        multiline={true}
+                        numberOfLines={4}
+                        onChangeText={text => setSig(text)}
+                        value={sig}
+                    />
+                </View>
             </View>
 
         </View>

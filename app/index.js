@@ -36,7 +36,6 @@ export default function Page(){
 
             <View style={Styles.buttonContainer}>
             {/* Might want to change buttons to pressable */}
-            {/* Buttons needs styling */}
             <View style={Styles.buttonStyle}>
             <Link href={{
                 pathname: "/storyPage",

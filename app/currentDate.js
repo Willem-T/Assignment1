@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 
+
+//pre:    
+//post:   Returns the current date
 function CurrentDate() {
   const [date, setDate] = useState(new Date());
 

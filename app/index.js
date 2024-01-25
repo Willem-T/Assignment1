@@ -14,8 +14,11 @@ export default function Page(){
     return (
         <View style={Styles.page}>
 
+            {/* Instructions */}
             <Text style={Styles.textStyleInstr}>Input text into the boxes to create a story</Text>
 
+
+            {/* Text Boxes */}
             <TextInput 
                 style={Styles.input}
                 onChangeText={setName}
@@ -37,6 +40,7 @@ export default function Page(){
                 placeholder='An Event'        
             ></TextInput>
 
+            {/* Buttons */}
             <View style={Styles.buttonContainer}>
             {/* Might want to change buttons to pressable */}
             <View style={Styles.buttonStyle}>
